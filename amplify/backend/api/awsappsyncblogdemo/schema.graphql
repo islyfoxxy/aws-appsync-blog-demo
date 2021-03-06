@@ -1,0 +1,28 @@
+type Post @model {
+  id: ID!
+  postOwnerId: String!
+  postOwnerUsername: String!
+  postTitle: String!
+  posrtBody: String!
+  createdAt: String!
+  description: String
+  comments: [Comment] @connection(name:"PostComments") #relations
+  likes: [Like] @connection(name:"PostLikes") #relations
+}
+
+type Comment @model {
+  id :ID!
+  commentOwnerId: String!
+  commentOwnerUsername: String!
+  post: Post @connection(name:"PostComments")
+  content: String!
+  createdAt: String!
+}
+
+type Like @model {
+  id: ID!
+  numberLikes: Int!
+  likeOwnerId: String!
+  likeOwnerUsername: String!
+  post: Post @connection(name:"PostLikes")
+}
