@@ -8,7 +8,7 @@ export const getPost = /* GraphQL */ `
       postOwnerId
       postOwnerUsername
       postTitle
-      posrtBody
+      postBody
       createdAt
       description
       comments {
@@ -49,7 +49,7 @@ export const listPosts = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -75,7 +75,7 @@ export const getComment = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -108,7 +108,7 @@ export const listComments = /* GraphQL */ `
           postOwnerId
           postOwnerUsername
           postTitle
-          posrtBody
+          postBody
           createdAt
           description
           updatedAt
@@ -133,7 +133,7 @@ export const getLike = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -166,7 +166,7 @@ export const listLikes = /* GraphQL */ `
           postOwnerId
           postOwnerUsername
           postTitle
-          posrtBody
+          postBody
           createdAt
           description
           updatedAt

@@ -11,7 +11,7 @@ export const createPost = /* GraphQL */ `
       postOwnerId
       postOwnerUsername
       postTitle
-      posrtBody
+      postBody
       createdAt
       description
       comments {
@@ -50,7 +50,7 @@ export const updatePost = /* GraphQL */ `
       postOwnerId
       postOwnerUsername
       postTitle
-      posrtBody
+      postBody
       createdAt
       description
       comments {
@@ -89,7 +89,7 @@ export const deletePost = /* GraphQL */ `
       postOwnerId
       postOwnerUsername
       postTitle
-      posrtBody
+      postBody
       createdAt
       description
       comments {
@@ -132,7 +132,7 @@ export const createComment = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -163,7 +163,7 @@ export const updateComment = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -194,7 +194,7 @@ export const deleteComment = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -226,7 +226,7 @@ export const createLike = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -257,7 +257,7 @@ export const updateLike = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {
@@ -288,7 +288,7 @@ export const deleteLike = /* GraphQL */ `
         postOwnerId
         postOwnerUsername
         postTitle
-        posrtBody
+        postBody
         createdAt
         description
         comments {

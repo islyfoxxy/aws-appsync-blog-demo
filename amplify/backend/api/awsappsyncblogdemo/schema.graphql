@@ -3,7 +3,7 @@ type Post @model {
   postOwnerId: String!
   postOwnerUsername: String!
   postTitle: String!
-  posrtBody: String!
+  postBody: String!
   createdAt: String!
   description: String
   comments: [Comment] @connection(name:"PostComments") #relations
