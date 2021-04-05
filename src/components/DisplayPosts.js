@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { listPosts } from '../graphql/queries'
+import { onCreatePost } from '../graphql/subscriptions'
 import { API, graphqlOperation } from 'aws-amplify'
 import DeletePost from './DeletePost'
 import EditPost from './EditPost'
@@ -17,6 +18,17 @@ export default function DisplayPosts () {
       setPosts(allPosts)
       console.log('Data received!', allPosts)
     })
+
+    const createPostListener = API.graphql(graphqlOperation(onCreatePost))
+      .subscribe({
+        next: ({ value: { data: { onCreatePost: newPost } } }) => {
+          setPosts((posts) => [newPost, ...posts.filter(post => post.id !== newPost.id)])
+        }
+      })
+
+    return () => {
+      createPostListener.unsubscribe()
+    }
 
   }, [])
 
